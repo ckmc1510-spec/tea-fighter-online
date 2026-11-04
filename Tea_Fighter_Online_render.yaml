@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: tea-fighter-online
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_VERSION
+        value: 22
